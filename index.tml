@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Satria</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="nama-box">
+        <h1>Satria Adjie Saputra</h1>
+        <p>Desainer & Programmer</p>
+      </div>
+      <div class="foto-box">
+        <img src="foto-profil.jpg" alt="Foto Satria">
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah lulusan SMAN 2 Pringsewu. Berpengalaman dalam desain grafis menggunakan CorelDRAW & IbisPaint X, serta pengembangan web menggunakan HTML, PHP, dan WordPress.</p>
+    </section>
+    <section class="skills">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>Desain Grafis (CorelDRAW, IbisPaint)</li>
+        <li>Web Development (HTML, CSS, PHP, WordPress)</li>
+        <li>Video Editing (CapCut)</li>
+        <li>Python untuk automasi & keamanan</li>
+      </ul>
+    </section>
+    <section class="projects">
+      <h2>Proyek</h2>
+      <div class="project-card">
+        <h3>Bot Flash Sale Shopee</h3>
+        <p>Bot otomatisasi pembelian flash sale berbasis Python & Selenium di terminal Kali Linux.</p>
+      </div>
+      <div class="project-card">
+        <h3>Website Portofolio</h3>
+        <p>Website pribadi berbasis HTML & CSS dengan animasi dan tema teknologi.</p>
+      </div>
+    </section>
+    <section id="kontak">
+        <h2>Hubungi Saya</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Nama Anda" required>
+          <input type="email" name="email" placeholder="Email Anda" required>
+          <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+      </section>      
+  </main>
+  <footer>
+    <p>&copy; 2025 Satria Adjie Saputra. All rights reserved.</p>
+  </footer>
+</body>
+</html>
