@@ -8,15 +8,25 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+<!-- Tombol Menu -->
+<div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
   <ul>
     <li><a href="trading.html" target="_blank">Edukasi Trading</a></li>
-    <!-- Tambahan menu lain bisa ditaruh di sini -->
   </ul>
 </nav>
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("show");
+  }
+</script>
 
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
   <header>
     <div class="header-container">
       <div class="nama-box">
