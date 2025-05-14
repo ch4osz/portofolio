@@ -48,51 +48,7 @@
         }
         updateClock();
 
-        function submitComment() {
-            const nama = document.getElementById("nama").value.trim();
-            const pesan = document.getElementById("pesan").value.trim();
-            if (nama === "" || pesan === "") {
-                alert("Nama dan komentar tidak boleh kosong!");
-                return;
-            }
-
-            // Buat elemen baru untuk komentar
-            const commentSection = document.getElementById("comment-section");
-            const commentDiv = document.createElement("div");
-            commentDiv.classList.add("comment");
-
-            commentDiv.innerHTML = `
-                <strong>${nama}</strong>
-                <p>${pesan}</p>
-            `;
-
-            // Tambahkan ke daftar komentar
-            commentSection.appendChild(commentDiv);
-
-            // Kosongkan input setelah dikirim
-            document.getElementById("nama").value = "";
-            document.getElementById("pesan").value = "";
-        }
     </script>
-
-    <!-- Form Komentar -->
-    <section class="komentar">
-        <h2>Komentar</h2>
-        <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
-        </div>
-        <div class="form-group">
-            <label for="pesan">Komentar</label>
-            <textarea id="pesan" name="pesan" placeholder="Tulis komentar Anda..." required></textarea>
-        </div>
-        <div class="form-submit">
-            <button type="button" onclick="submitComment()">Kirim</button>
-        </div>
-
-        <!-- Tempat Komentar Ditampilkan -->
-        <div id="comment-section"></div>
-
         <div class="khusus">
             <header>
                 <h1>KHUSUS UNTUK RETTA CHARISTY</h1>
