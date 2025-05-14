@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Selamat Datang di Website Belajar Trading</h1>
+            <div id="clock"></div>
+        </header>
+    </div>
+
+    <section class="materi">
+        <header>
+            <h1>Materi Trading</h1>
+        </header>
+        <div class="materi-content">
+            <div class="materi-file">
+                <img src="fotomateri1.jpg" alt="Materi Trading" width="300">
+                <a href="materi1.pptx" download>
+                    <button>Download Materi</button>
+                </a>
+            </div>
+            <div class="materi-file">
+                <img src="fotomateri2.jpeg" alt="Materi Trading" width="300">
+                <a href="materi2.pdf" download>
+                    <button>Download Materi</button>
+                </a>
+            </div>
+            <div class="materi-file">
+                <img src="placeholder.jpg" alt="Materi Trading" width="300">
+                <a href="materi-trading.pdf" download>
+                    <button>Download Materi</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById("clock").innerText = now.toLocaleTimeString();
+            setTimeout(updateClock, 1000);
+        }
+        updateClock();
+
+        function submitComment() {
+            const nama = document.getElementById("nama").value.trim();
+            const pesan = document.getElementById("pesan").value.trim();
+            if (nama === "" || pesan === "") {
+                alert("Nama dan komentar tidak boleh kosong!");
+                return;
+            }
+
+            // Buat elemen baru untuk komentar
+            const commentSection = document.getElementById("comment-section");
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment");
+
+            commentDiv.innerHTML = `
+                <strong>${nama}</strong>
+                <p>${pesan}</p>
+            `;
+
+            // Tambahkan ke daftar komentar
+            commentSection.appendChild(commentDiv);
+
+            // Kosongkan input setelah dikirim
+            document.getElementById("nama").value = "";
+            document.getElementById("pesan").value = "";
+        }
+    </script>
+
+    <!-- Form Komentar -->
+    <section class="komentar">
+        <h2>Komentar</h2>
+        <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+        </div>
+        <div class="form-group">
+            <label for="pesan">Komentar</label>
+            <textarea id="pesan" name="pesan" placeholder="Tulis komentar Anda..." required></textarea>
+        </div>
+        <div class="form-submit">
+            <button type="button" onclick="submitComment()">Kirim</button>
+        </div>
+
+        <!-- Tempat Komentar Ditampilkan -->
+        <div id="comment-section"></div>
+
+        <div class="khusus">
+            <header>
+                <h1>KHUSUS UNTUK RETTA CHARISTY</h1>
+            </header>
+        </div>
+    </section>
+
+</body>
+</html>
